@@ -1,0 +1,46 @@
+# high level setting
+reduction: "mean"
+batch_size: 4096
+num_workers: 0
+clip_grad: 1000
+gamma: 0.998
+use_cuda: true
+predict_user: false
+mask: true
+hetero: true
+
+# path
+dataPath: '../data/'
+outputPath: "../output"
+hcPath: 'feature_ruled'
+yPath: 'y_ruled'
+weightPath: 'mask_expanded_ruled'
+modelPath: 'model.pkl'
+resultPath: 'result.npy'
+strategy: 'auto'
+
+# fixed
+users: 60
+phonePlacements: 5
+activities: 12
+hgcn_l1_in_channels: 170
+hgcn_l2_in_channels: -1
+raw_dim: 12
+seed: 2
+input_dim: 170
+bert_dim: 768
+trails: 100 # 100 combinations of below hypers
+
+# searching hypers
+search:
+  lr: tune.uniform(-7, -3)
+  epoch: tune.uniform(100,800)
+  hidden_dim_1: tune.uniform(16, 1024)
+  hidden_dim_2: tune.uniform(16, 1024)
+  dropout: tune.uniform(0, 0.5)
+  leakySlope: tune.uniform(0.1, 0.3)
+  model_commonDim: tune.uniform(256, 4096)
+
+
+
+
