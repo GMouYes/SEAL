@@ -7,7 +7,7 @@ We are excited to share our latest work on improving HAR performance with a lang
 ## What is in the repo
 - bash script in ``code`` folder for running the code ``train.sh``
 - folder ``code`` containing all python code
-- folder ``config`` containing the configuration file, indicating the hyperparameters we used and the search space.
+- folder ``config`` containing the configuration file, indicating the best hyperparameters we used for Extrasensory. You can set search ranges for Gaussian optimization for other datasets.
 - folder ``data`` containing sampled data (not the full data)
 
 We showcase an example of running the given code on a sampled data slice. [Extrasensory](http://extrasensory.ucsd.edu/#paper.vaizman2017a) is a public dataset and researchers should be able to download and process the full original source dataset (unfortunately, we do not own this dataset). For more details, please refer to their original paper.
