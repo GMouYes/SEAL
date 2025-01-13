@@ -10,7 +10,7 @@ mask: true
 hetero: true
 
 # path
-dataPath: '../data/'
+dataPath: '../sampledata/'
 outputPath: "../output"
 hcPath: 'feature_ruled'
 yPath: 'y_ruled'
@@ -26,20 +26,26 @@ activities: 12
 hgcn_l1_in_channels: 170
 hgcn_l2_in_channels: -1
 raw_dim: 12
-seed: 2
+seed: 5
 input_dim: 170
 bert_dim: 768
-trails: 100 # 100 combinations of below hypers
-
+trails: 1 # 100 combinations of below hypers
+epoch: 713
+lr: -4.4
+hidden_dim_1: 825
+hidden_dim_2: 376
+dropout: 0.025
+leakySlope: 0.2
+model_commonDim: 3683
 # searching hypers
-search:
-  lr: tune.uniform(-7, -3)
-  epoch: tune.uniform(100,800)
-  hidden_dim_1: tune.uniform(16, 1024)
-  hidden_dim_2: tune.uniform(16, 1024)
-  dropout: tune.uniform(0, 0.5)
-  leakySlope: tune.uniform(0.1, 0.3)
-  model_commonDim: tune.uniform(256, 4096)
+# search:
+#   lr: tune.uniform(-7, -3)
+#   epoch: tune.uniform(100,800)
+#   hidden_dim_1: tune.uniform(16, 1024)
+#   hidden_dim_2: tune.uniform(16, 1024)
+#   dropout: tune.uniform(0, 0.5)
+#   leakySlope: tune.uniform(0.1, 0.3)
+#   model_commonDim: tune.uniform(256, 4096)
 
 
 
